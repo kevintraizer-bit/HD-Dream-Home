@@ -1,0 +1,2596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Your Dream Home - Professional House Design</title>
+    <style>
+        :root {
+  /* Enhanced sizing for large screens */
+  --canvas-width: 95vw;
+  --canvas-height: 90vh;
+  --font-size-xl-enhanced: 22px;
+  --font-size-2xl-enhanced: 28px;
+  --font-size-3xl-enhanced: 36px;
+  --font-size-4xl-enhanced: 48px;
+  --space-xl: 48px;
+  --space-2xl: 64px;
+  --radius-xl: 20px;
+  
+  /* Primitive Color Tokens */
+  --color-white: rgba(255, 255, 255, 1);
+  --color-black: rgba(0, 0, 0, 1);
+  --color-cream-50: rgba(252, 252, 249, 1);
+  --color-cream-100: rgba(255, 255, 253, 1);
+  --color-gray-200: rgba(245, 245, 245, 1);
+  --color-gray-300: rgba(167, 169, 169, 1);
+  --color-gray-400: rgba(119, 124, 124, 1);
+  --color-slate-500: rgba(98, 108, 113, 1);
+  --color-brown-600: rgba(94, 82, 64, 1);
+  --color-charcoal-700: rgba(31, 33, 33, 1);
+  --color-charcoal-800: rgba(38, 40, 40, 1);
+  --color-slate-900: rgba(19, 52, 59, 1);
+  --color-teal-300: rgba(50, 184, 198, 1);
+  --color-teal-400: rgba(45, 166, 178, 1);
+  --color-teal-500: rgba(33, 128, 141, 1);
+  --color-teal-600: rgba(29, 116, 128, 1);
+  --color-teal-700: rgba(26, 104, 115, 1);
+  --color-teal-800: rgba(41, 150, 161, 1);
+  --color-red-400: rgba(255, 84, 89, 1);
+  --color-red-500: rgba(192, 21, 47, 1);
+  --color-orange-400: rgba(230, 129, 97, 1);
+  --color-orange-500: rgba(168, 75, 47, 1);
+
+  /* RGB versions for opacity control */
+  --color-brown-600-rgb: 94, 82, 64;
+  --color-teal-500-rgb: 33, 128, 141;
+  --color-slate-900-rgb: 19, 52, 59;
+  --color-slate-500-rgb: 98, 108, 113;
+  --color-red-500-rgb: 192, 21, 47;
+  --color-red-400-rgb: 255, 84, 89;
+  --color-orange-500-rgb: 168, 75, 47;
+  --color-orange-400-rgb: 230, 129, 97;
+
+  /* Background color tokens (Light Mode) */
+  --color-bg-1: rgba(59, 130, 246, 0.08); /* Light blue */
+  --color-bg-2: rgba(245, 158, 11, 0.08); /* Light yellow */
+  --color-bg-3: rgba(34, 197, 94, 0.08); /* Light green */
+  --color-bg-4: rgba(239, 68, 68, 0.08); /* Light red */
+  --color-bg-5: rgba(147, 51, 234, 0.08); /* Light purple */
+  --color-bg-6: rgba(249, 115, 22, 0.08); /* Light orange */
+  --color-bg-7: rgba(236, 72, 153, 0.08); /* Light pink */
+  --color-bg-8: rgba(6, 182, 212, 0.08); /* Light cyan */
+
+  /* Semantic Color Tokens (Light Mode) */
+  --color-background: var(--color-cream-50);
+  --color-surface: var(--color-cream-100);
+  --color-text: var(--color-slate-900);
+  --color-text-secondary: var(--color-slate-500);
+  --color-primary: var(--color-teal-500);
+  --color-primary-hover: var(--color-teal-600);
+  --color-primary-active: var(--color-teal-700);
+  --color-secondary: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-secondary-hover: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-secondary-active: rgba(var(--color-brown-600-rgb), 0.25);
+  --color-border: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-btn-primary-text: var(--color-cream-50);
+  --color-card-border: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-card-border-inner: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-error: var(--color-red-500);
+  --color-success: var(--color-teal-500);
+  --color-warning: var(--color-orange-500);
+  --color-info: var(--color-slate-500);
+  --color-focus-ring: rgba(var(--color-teal-500-rgb), 0.4);
+  --color-select-caret: rgba(var(--color-slate-900-rgb), 0.8);
+
+  /* Common style patterns */
+  --focus-ring: 0 0 0 3px var(--color-focus-ring);
+  --focus-outline: 2px solid var(--color-primary);
+  --status-bg-opacity: 0.15;
+  --status-border-opacity: 0.25;
+  --select-caret-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23134252' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  --select-caret-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23f5f5f5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+
+  /* RGB versions for opacity control */
+  --color-success-rgb: 33, 128, 141;
+  --color-error-rgb: 192, 21, 47;
+  --color-warning-rgb: 168, 75, 47;
+  --color-info-rgb: 98, 108, 113;
+
+  /* Typography */
+  --font-family-base: "FKGroteskNeue", "Geist", "Inter", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-family-mono: "Berkeley Mono", ui-monospace, SFMono-Regular, Menlo,
+    Monaco, Consolas, monospace;
+  --font-size-xs: 11px;
+  --font-size-sm: 12px;
+  --font-size-base: 14px;
+  --font-size-md: 14px;
+  --font-size-lg: 16px;
+  --font-size-xl: 18px;
+  --font-size-2xl: 20px;
+  --font-size-3xl: 24px;
+  --font-size-4xl: 30px;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 550;
+  --font-weight-bold: 600;
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --letter-spacing-tight: -0.01em;
+
+  /* Spacing */
+  --space-0: 0;
+  --space-1: 1px;
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-10: 10px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-base: 8px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04),
+    0 2px 4px -1px rgba(0, 0, 0, 0.02);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.04),
+    0 4px 6px -2px rgba(0, 0, 0, 0.02);
+  --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.03);
+
+  /* Animation */
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Layout */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+
+  /* Engineering theme colors */
+  --engineering-primary: #1e3a8a;
+  --engineering-secondary: #0891b2;
+  --engineering-accent: #f97316;
+  --engineering-grid: #e2e8f0;
+}
+
+/* Dark mode colors */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* RGB versions for opacity control (Dark Mode) */
+    --color-gray-400-rgb: 119, 124, 124;
+    --color-teal-300-rgb: 50, 184, 198;
+    --color-gray-300-rgb: 167, 169, 169;
+    --color-gray-200-rgb: 245, 245, 245;
+
+    /* Background color tokens (Dark Mode) */
+    --color-bg-1: rgba(29, 78, 216, 0.15); /* Dark blue */
+    --color-bg-2: rgba(180, 83, 9, 0.15); /* Dark yellow */
+    --color-bg-3: rgba(21, 128, 61, 0.15); /* Dark green */
+    --color-bg-4: rgba(185, 28, 28, 0.15); /* Dark red */
+    --color-bg-5: rgba(107, 33, 168, 0.15); /* Dark purple */
+    --color-bg-6: rgba(194, 65, 12, 0.15); /* Dark orange */
+    --color-bg-7: rgba(190, 24, 93, 0.15); /* Dark pink */
+    --color-bg-8: rgba(8, 145, 178, 0.15); /* Dark cyan */
+
+    /* Semantic Color Tokens (Dark Mode) */
+    --color-background: var(--color-charcoal-700);
+    --color-surface: var(--color-charcoal-800);
+    --color-text: var(--color-gray-200);
+    --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.7);
+    --color-primary: var(--color-teal-300);
+    --color-primary-hover: var(--color-teal-400);
+    --color-primary-active: var(--color-teal-800);
+    --color-secondary: rgba(var(--color-gray-400-rgb), 0.15);
+    --color-secondary-hover: rgba(var(--color-gray-400-rgb), 0.25);
+    --color-secondary-active: rgba(var(--color-gray-400-rgb), 0.3);
+    --color-border: rgba(var(--color-gray-400-rgb), 0.3);
+    --color-error: var(--color-red-400);
+    --color-success: var(--color-teal-300);
+    --color-warning: var(--color-orange-400);
+    --color-info: var(--color-gray-300);
+    --color-focus-ring: rgba(var(--color-teal-300-rgb), 0.4);
+    --color-btn-primary-text: var(--color-slate-900);
+    --color-card-border: rgba(var(--color-gray-400-rgb), 0.2);
+    --color-card-border-inner: rgba(var(--color-gray-400-rgb), 0.15);
+    --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+    --button-border-secondary: rgba(var(--color-gray-400-rgb), 0.2);
+    --color-border-secondary: rgba(var(--color-gray-400-rgb), 0.2);
+    --color-select-caret: rgba(var(--color-gray-200-rgb), 0.8);
+
+    /* Common style patterns - updated for dark mode */
+    --focus-ring: 0 0 0 3px var(--color-focus-ring);
+    --focus-outline: 2px solid var(--color-primary);
+    --status-bg-opacity: 0.15;
+    --status-border-opacity: 0.25;
+    --select-caret-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23134252' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    --select-caret-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23f5f5f5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+
+    /* RGB versions for dark mode */
+    --color-success-rgb: var(--color-teal-300-rgb);
+    --color-error-rgb: var(--color-red-400-rgb);
+    --color-warning-rgb: var(--color-orange-400-rgb);
+    --color-info-rgb: var(--color-gray-300-rgb);
+  }
+}
+
+/* Base styles */
+html {
+  font-size: var(--font-size-base);
+  font-family: var(--font-family-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  color: var(--color-text);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+h1 {
+  font-size: var(--font-size-4xl);
+}
+h2 {
+  font-size: var(--font-size-3xl);
+}
+h3 {
+  font-size: var(--font-size-2xl);
+}
+h4 {
+  font-size: var(--font-size-xl);
+}
+h5 {
+  font-size: var(--font-size-lg);
+}
+h6 {
+  font-size: var(--font-size-md);
+}
+
+p {
+  margin: 0 0 var(--space-16) 0;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+
+a:hover {
+  color: var(--color-primary-hover);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-8) var(--space-16);
+  border-radius: var(--radius-base);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-standard);
+  border: none;
+  text-decoration: none;
+  position: relative;
+}
+
+.btn:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.btn--primary {
+  background: var(--color-primary);
+  color: var(--color-btn-primary-text);
+}
+
+.btn--primary:hover {
+  background: var(--color-primary-hover);
+}
+
+.btn--primary:active {
+  background: var(--color-primary-active);
+}
+
+.btn--secondary {
+  background: var(--color-secondary);
+  color: var(--color-text);
+}
+
+.btn--secondary:hover {
+  background: var(--color-secondary-hover);
+}
+
+.btn--secondary:active {
+  background: var(--color-secondary-active);
+}
+
+.btn--outline {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.btn--outline:hover {
+  background: var(--color-secondary);
+}
+
+.btn--sm {
+  padding: var(--space-4) var(--space-12);
+  font-size: var(--font-size-sm);
+  border-radius: var(--radius-sm);
+}
+
+.btn--lg {
+  padding: var(--space-10) var(--space-20);
+  font-size: var(--font-size-lg);
+  border-radius: var(--radius-md);
+}
+
+.btn--full-width {
+  width: 100%;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Form elements */
+.form-control {
+  display: block;
+  width: 100%;
+  padding: var(--space-8) var(--space-12);
+  font-size: var(--font-size-md);
+  line-height: 1.5;
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  transition: border-color var(--duration-fast) var(--ease-standard),
+    box-shadow var(--duration-fast) var(--ease-standard);
+}
+
+textarea.form-control {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  resize: vertical;
+  min-height: 80px;
+}
+
+select.form-control {
+  padding: var(--space-8) var(--space-12);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: var(--select-caret-light);
+  background-repeat: no-repeat;
+  background-position: right var(--space-12) center;
+  background-size: 16px;
+  padding-right: var(--space-32);
+}
+
+.form-control:focus {
+  border-color: var(--color-primary);
+  outline: var(--focus-outline);
+}
+
+.form-label {
+  display: block;
+  margin-bottom: var(--space-8);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-sm);
+}
+
+.form-group {
+  margin-bottom: var(--space-16);
+}
+
+/* Card component */
+.card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-card-border);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: box-shadow var(--duration-normal) var(--ease-standard);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.card__body {
+  padding: var(--space-16);
+}
+
+.card__header,
+.card__footer {
+  padding: var(--space-16);
+  border-bottom: 1px solid var(--color-card-border-inner);
+}
+
+/* Container layout */
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--space-16);
+  padding-left: var(--space-16);
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: var(--container-sm);
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: var(--container-md);
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: var(--container-lg);
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: var(--container-xl);
+  }
+}
+
+/* Utility classes */
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.items-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.gap-4 {
+  gap: var(--space-4);
+}
+.gap-8 {
+  gap: var(--space-8);
+}
+.gap-16 {
+  gap: var(--space-16);
+}
+
+.m-0 {
+  margin: 0;
+}
+.mt-8 {
+  margin-top: var(--space-8);
+}
+.mb-8 {
+  margin-bottom: var(--space-8);
+}
+.mx-8 {
+  margin-left: var(--space-8);
+  margin-right: var(--space-8);
+}
+.my-8 {
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-8);
+}
+
+.p-0 {
+  padding: 0;
+}
+.py-8 {
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-8);
+}
+.px-8 {
+  padding-left: var(--space-8);
+  padding-right: var(--space-8);
+}
+.py-16 {
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-16);
+}
+.px-16 {
+  padding-left: var(--space-16);
+  padding-right: var(--space-16);
+}
+
+.block {
+  display: block;
+}
+.hidden {
+  display: none;
+}
+
+/* Engineering theme specific styles */
+.hero-section {
+  background: linear-gradient(135deg, var(--engineering-primary) 0%, var(--engineering-secondary) 100%);
+  color: white;
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.hero-title {
+  font-size: var(--font-size-4xl-enhanced);
+  font-weight: 700;
+  margin-bottom: var(--space-20);
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.hero-subtitle {
+  font-size: var(--font-size-xl-enhanced);
+  opacity: 0.9;
+  margin-bottom: var(--space-32);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.feature-card {
+  background: var(--color-surface);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-card-border);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--engineering-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-size: 24px;
+  color: white;
+}
+
+.view-container {
+  min-height: 100vh;
+  transition: opacity 0.3s ease;
+}
+
+.view-container.hidden {
+  display: none;
+}
+
+/* Enhanced Form styles for better UX */
+.form-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: var(--space-32);
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--color-card-border);
+}
+
+.form-control {
+  padding: var(--space-16) var(--space-16);
+  font-size: var(--font-size-lg);
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--color-border);
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(var(--color-teal-500-rgb), 0.2);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.form-label {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-12);
+  color: var(--color-text);
+}
+
+.btn--lg {
+  padding: var(--space-16) var(--space-24);
+  font-size: var(--font-size-xl);
+  border-radius: var(--radius-lg);
+  font-weight: var(--font-weight-semibold);
+}
+
+.checkbox-item {
+  padding: var(--space-8);
+  border-radius: var(--radius-base);
+  transition: background-color 0.2s ease;
+}
+
+.checkbox-item:hover {
+  background-color: var(--color-bg-1);
+}
+
+.checkbox-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-right: var(--space-8);
+}
+
+.checkbox-item label {
+  font-size: var(--font-size-lg);
+  cursor: pointer;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.progress-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.progress-step {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-base);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+}
+
+.progress-step.active {
+  background: var(--engineering-primary);
+  color: white;
+}
+
+.progress-step.inactive {
+  background: var(--color-secondary);
+  color: var(--color-text-secondary);
+}
+
+/* 2D Canvas styles */
+.canvas-container {
+  display: flex;
+  height: var(--canvas-height);
+  gap: var(--space-20);
+  padding: var(--space-20);
+  position: relative;
+}
+
+.canvas-container.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--color-background);
+  z-index: 999;
+  padding: var(--space-16);
+}
+
+.canvas-sidebar {
+  width: 320px;
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  padding: var(--space-24);
+  border: 1px solid var(--color-card-border);
+  overflow-y: auto;
+  box-shadow: var(--shadow-lg);
+}
+
+.canvas-sidebar h3, .canvas-sidebar h4 {
+  font-size: var(--font-size-xl-enhanced);
+  margin-bottom: var(--space-16);
+}
+
+.canvas-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.canvas-toolbar {
+  background: var(--color-surface);
+  padding: var(--space-20);
+  border-radius: var(--radius-xl);
+  margin-bottom: var(--space-20);
+  display: flex;
+  gap: var(--space-12);
+  flex-wrap: wrap;
+  border: 1px solid var(--color-card-border);
+  box-shadow: var(--shadow-lg);
+}
+
+.tool-button {
+  width: 70px;
+  height: 70px;
+  border: 2px solid var(--color-border);
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 24px;
+  position: relative;
+  box-shadow: var(--shadow-sm);
+}
+
+.tool-button:hover::after {
+  content: attr(title);
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-charcoal-700);
+  color: white;
+  padding: var(--space-4) var(--space-8);
+  border-radius: var(--radius-base);
+  font-size: var(--font-size-sm);
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.tool-button:hover {
+  background: var(--color-secondary);
+}
+
+.tool-button.active {
+  background: var(--engineering-primary);
+  color: white;
+  border-color: var(--engineering-primary);
+}
+
+.canvas-area {
+  flex: 1;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-card-border);
+  position: relative;
+  overflow: hidden;
+}
+
+#floorPlanCanvas {
+  background-color: white;
+  background-image: 
+    linear-gradient(var(--engineering-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--engineering-grid) 1px, transparent 1px);
+  background-size: 20px 20px;
+  cursor: crosshair;
+  width: 100%;
+  height: 100%;
+}
+
+.canvas-actions {
+  background: var(--color-surface);
+  padding: 1rem;
+  border-radius: var(--radius-lg);
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--color-card-border);
+}
+
+/* 3D Visualization styles */
+.view-3d-container {
+  padding: var(--space-20);
+  height: var(--canvas-height);
+  display: flex;
+  gap: var(--space-24);
+  position: relative;
+}
+
+.view-3d-container.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--color-background);
+  z-index: 999;
+  padding: var(--space-16);
+}
+
+.view-3d-main {
+  flex: 1;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-card-border);
+  position: relative;
+  overflow: hidden;
+}
+
+.view-3d-canvas {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+  perspective: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.house-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+  transform: rotateX(-15deg) rotateY(25deg);
+}
+
+.view-3d-controls {
+  position: absolute;
+  top: var(--space-20);
+  right: var(--space-20);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: var(--space-20);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--color-card-border);
+}
+
+.view-3d-controls h4 {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-8);
+  text-align: center;
+}
+
+.view-3d-controls .btn {
+  min-width: 120px;
+  justify-content: center;
+}
+
+.view-3d-sidebar {
+  width: 380px;
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-card-border);
+  padding: var(--space-24);
+  overflow-y: auto;
+  box-shadow: var(--shadow-lg);
+}
+
+.view-3d-sidebar h3, .view-3d-sidebar h4 {
+  font-size: var(--font-size-xl-enhanced);
+  margin-bottom: var(--space-16);
+}
+
+.room-3d {
+  position: absolute;
+  border: 2px solid #333;
+  background: rgba(200, 220, 240, 0.7);
+  transform-style: preserve-3d;
+}
+
+.room-wall {
+  position: absolute;
+  background: rgba(180, 180, 180, 0.8);
+  border: 1px solid #666;
+}
+
+.room-floor {
+  position: absolute;
+  background: rgba(240, 240, 240, 0.9);
+  border: 1px solid #999;
+}
+
+.room-label-3d {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  z-index: 10;
+}
+
+/* Interior Design View Styles */
+.interior-header {
+  text-align: center;
+  padding: 2rem 0;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-card-border);
+}
+
+.interior-container {
+  display: flex;
+  height: calc(100vh - 300px);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.interior-sidebar-left,
+.interior-sidebar-right {
+  width: 280px;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-card-border);
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.interior-main {
+  flex: 1;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-card-border);
+  position: relative;
+  overflow: hidden;
+}
+
+.interior-canvas {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  perspective: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.room-interior-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+  transform: rotateX(-20deg) rotateY(30deg) scale(0.8);
+}
+
+.room-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.room-item {
+  padding: 0.75rem;
+  background: var(--color-secondary);
+  border-radius: var(--radius-base);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.room-item:hover {
+  background: var(--color-secondary-hover);
+}
+
+.room-item.active {
+  background: var(--color-primary);
+  color: var(--color-btn-primary-text);
+  border-color: var(--color-primary);
+}
+
+.camera-controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.view-toggles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.toggle-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+}
+
+.color-scheme-selector {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.color-option {
+  padding: 0.5rem;
+  text-align: center;
+  font-size: var(--font-size-xs);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.color-option:hover {
+  background: var(--color-secondary);
+}
+
+.color-option.active {
+  background: var(--color-primary);
+  color: var(--color-btn-primary-text);
+}
+
+.room-info,
+.furniture-list,
+.room-summary {
+  font-size: var(--font-size-sm);
+  line-height: 1.4;
+}
+
+.interior-actions {
+  background: var(--color-surface);
+  padding: 1rem;
+  border-top: 1px solid var(--color-card-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.action-left,
+.action-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* 3D Furniture Styles */
+.furniture-item {
+  position: absolute;
+  transform-style: preserve-3d;
+}
+
+.sofa {
+  width: 120px;
+  height: 80px;
+  background: linear-gradient(145deg, #6366f1, #4f46e5);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transform: translateZ(0px);
+}
+
+.sofa::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  right: 10px;
+  height: 30px;
+  background: linear-gradient(145deg, #7c3aed, #6d28d9);
+  border-radius: 8px 8px 0 0;
+}
+
+.coffee-table {
+  width: 80px;
+  height: 50px;
+  background: linear-gradient(145deg, #d97706, #b45309);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transform: translateZ(0px);
+}
+
+.coffee-table::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 5px;
+  right: 5px;
+  height: 4px;
+  background: #92400e;
+  border-radius: 2px;
+}
+
+.bed {
+  width: 100px;
+  height: 140px;
+  background: linear-gradient(145deg, #e11d48, #be185d);
+  border-radius: 6px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transform: translateZ(0px);
+}
+
+.bed::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: 0;
+  height: 25px;
+  background: linear-gradient(145deg, #f472b6, #ec4899);
+  border-radius: 6px 6px 0 0;
+}
+
+.kitchen-counter {
+  width: 150px;
+  height: 60px;
+  background: linear-gradient(145deg, #059669, #047857);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transform: translateZ(0px);
+}
+
+.dining-table {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(145deg, #dc2626, #b91c1c);
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transform: translateZ(0px);
+}
+
+.bathroom-fixture {
+  width: 60px;
+  height: 40px;
+  background: linear-gradient(145deg, #0891b2, #0e7490);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transform: translateZ(0px);
+}
+
+.wall-art {
+  width: 40px;
+  height: 30px;
+  background: linear-gradient(145deg, #7c2d12, #92400e);
+  border-radius: 2px;
+  border: 2px solid #451a03;
+  transform: translateZ(1px);
+}
+
+.plant {
+  width: 25px;
+  height: 25px;
+  background: radial-gradient(circle, #16a34a, #15803d);
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transform: translateZ(2px);
+}
+
+.plant::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 12px;
+  background: #a16207;
+  border-radius: 0 0 50% 50%;
+}
+
+.lamp {
+  width: 20px;
+  height: 35px;
+  background: linear-gradient(145deg, #fbbf24, #f59e0b);
+  border-radius: 50% 50% 20% 20%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transform: translateZ(2px);
+}
+
+.lamp::before {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 20px;
+  background: #92400e;
+}
+
+.rug {
+  width: 120px;
+  height: 80px;
+  background: repeating-linear-gradient(
+    45deg,
+    #fef3c7,
+    #fef3c7 10px,
+    #fed7aa 10px,
+    #fed7aa 20px
+  );
+  border-radius: 8px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+  transform: translateZ(-1px);
+}
+
+/* Lighting Effects */
+.ceiling-light {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 8px;
+  background: radial-gradient(circle, #fbbf24, #f59e0b);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
+}
+
+.window-light {
+  position: absolute;
+  width: 60px;
+  height: 100px;
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.3) 50%,
+    rgba(255,255,255,0) 100%
+  );
+  transform: translateZ(1px);
+}
+
+/* Room-specific backgrounds */
+.room-interior.living-room {
+  background: linear-gradient(135deg, var(--color-bg-1), rgba(255,255,255,0.8));
+}
+
+.room-interior.bedroom {
+  background: linear-gradient(135deg, var(--color-bg-2), rgba(255,255,255,0.8));
+}
+
+.room-interior.kitchen {
+  background: linear-gradient(135deg, var(--color-bg-3), rgba(255,255,255,0.8));
+}
+
+.room-interior.bathroom {
+  background: linear-gradient(135deg, var(--color-bg-4), rgba(255,255,255,0.8));
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .interior-container {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .interior-sidebar-left,
+  .interior-sidebar-right {
+    width: 100%;
+    max-height: 200px;
+  }
+  
+  .interior-main {
+    height: 400px;
+  }
+  
+  .interior-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .action-left,
+  .action-right {
+    justify-content: center;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .canvas-container {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .canvas-sidebar {
+    width: 100%;
+    max-height: 200px;
+  }
+  
+  .view-3d-container {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .view-3d-sidebar {
+    width: 100%;
+    max-height: 200px;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@font-face {
+  font-family: 'FKGroteskNeue';
+  src: url('https://r2cdn.perplexity.ai/fonts/FKGroteskNeue.woff2')
+    format('woff2');
+}
+    </style>
+</head>
+<body>
+    <!-- Landing Page -->
+    <div id="landingView" class="view-container">
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Engineering Your Dream Home</h1>
+                <p class="hero-subtitle">Design your house with precision - From 2D Floor Plans to 3D Visualization</p>
+                <button class="btn btn--primary btn--lg" onclick="showView('formView')">Start Designing</button>
+            </div>
+        </section>
+        
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📐</div>
+                    <h3>XL Professional 2D Floor Plans</h3>
+                    <p>Design with large, full-screen canvas using engineering-grade precision tools</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏗️</div>
+                    <h3>Immersive 3D Visualization</h3>
+                    <p>View your design in large-scale 3D with full-screen mode and advanced controls</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Streamlined 3-Step Process</h3>
+                    <p>Simplified workflow: Details → 2D Drawing → 3D Structure visualization</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💾</div>
+                    <h3>Export &amp; Share Your Design</h3>
+                    <p>Download high-resolution images, PDFs, and share interactive 3D models</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- House Input Form View -->
+    <div id="formView" class="view-container hidden">
+        <div class="container py-16">
+            <div class="progress-indicator">
+                <div class="progress-step active">1. House Details</div>
+                <div class="progress-step inactive">→</div>
+                <div class="progress-step inactive">2. 2D Floor Plan</div>
+                <div class="progress-step inactive">→</div>
+                <div class="progress-step inactive">3. 3D Visualization</div>
+            </div>
+            
+            <div class="form-container">
+                <h1 style="text-align: center; font-size: var(--font-size-3xl-enhanced); margin-bottom: var(--space-24);">Tell Us About Your Dream House</h1>
+                <p style="text-align: center; font-size: var(--font-size-xl); color: var(--color-text-secondary); margin-bottom: var(--space-32);">Let's start by gathering some basic information about your ideal home</p>
+                
+                <form id="houseForm">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label" for="houseName">House Name/Project Name
+                                <span class="help-icon" data-tooltip="Give your project a memorable name">?</span>
+                            </label>
+                            <input type="text" id="houseName" class="form-control" placeholder="My Dream House" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="totalArea">Total Area
+                                <span class="help-icon" data-tooltip="Total living space of your house">?</span>
+                            </label>
+                            <div class="flex gap-4">
+                                <input type="number" id="totalArea" class="form-control" placeholder="2000" required style="flex: 2;">
+                                <select id="areaUnit" class="form-control" style="flex: 1;">
+                                    <option value="sqft">sq ft</option>
+                                    <option value="sqm">sq m</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="bedrooms">Number of Bedrooms</label>
+                            <select id="bedrooms" class="form-control" required>
+                                <option value="">Select bedrooms</option>
+                                <option value="1">1 Bedroom</option>
+                                <option value="2">2 Bedrooms</option>
+                                <option value="3">3 Bedrooms</option>
+                                <option value="4">4 Bedrooms</option>
+                                <option value="5">5 Bedrooms</option>
+                                <option value="6">6+ Bedrooms</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="bathrooms">Number of Bathrooms</label>
+                            <select id="bathrooms" class="form-control" required>
+                                <option value="">Select bathrooms</option>
+                                <option value="1">1 Bathroom</option>
+                                <option value="2">2 Bathrooms</option>
+                                <option value="3">3 Bathrooms</option>
+                                <option value="4">4 Bathrooms</option>
+                                <option value="5">5+ Bathrooms</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="floors">Number of Floors/Stories</label>
+                            <select id="floors" class="form-control" required>
+                                <option value="">Select floors</option>
+                                <option value="1">1 Floor</option>
+                                <option value="2">2 Floors</option>
+                                <option value="3">3 Floors</option>
+                                <option value="4">4 Floors</option>
+                                <option value="5">5 Floors</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="houseStyle">House Style</label>
+                            <select id="houseStyle" class="form-control" required>
+                                <option value="">Select style</option>
+                                <option value="Modern">Modern</option>
+                                <option value="Traditional">Traditional</option>
+                                <option value="Contemporary">Contemporary</option>
+                                <option value="Colonial">Colonial</option>
+                                <option value="Ranch">Ranch</option>
+                                <option value="Victorian">Victorian</option>
+                                <option value="Mediterranean">Mediterranean</option>
+                                <option value="Craftsman">Craftsman</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Special Features</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="garage" value="Garage">
+                                <label for="garage">Garage</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="balcony" value="Balcony">
+                                <label for="balcony">Balcony</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="basement" value="Basement">
+                                <label for="basement">Basement</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="attic" value="Attic">
+                                <label for="attic">Attic</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="patio" value="Patio">
+                                <label for="patio">Patio</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="pool" value="Swimming Pool">
+                                <label for="pool">Swimming Pool</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="garden" value="Garden">
+                                <label for="garden">Garden</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="office" value="Home Office">
+                                <label for="office">Home Office</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="budget">Budget Range</label>
+                        <select id="budget" class="form-control">
+                            <option value="">Select budget range</option>
+                            <option value="Under $100,000">Under $100,000</option>
+                            <option value="$100,000 - $250,000">$100,000 - $250,000</option>
+                            <option value="$250,000 - $500,000">$250,000 - $500,000</option>
+                            <option value="$500,000 - $1,000,000">$500,000 - $1,000,000</option>
+                            <option value="Over $1,000,000">Over $1,000,000</option>
+                            <option value="Not Specified">Not Specified</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="requirements">Additional Requirements</label>
+                        <textarea id="requirements" class="form-control" rows="4" placeholder="Any specific requirements or preferences..."></textarea>
+                    </div>
+                    
+                    <div class="flex justify-between gap-16 mt-8">
+                        <button type="button" class="btn btn--secondary btn--lg" onclick="showView('landingView')">← Back to Home</button>
+                        <button type="submit" class="btn btn--primary" style="padding: var(--space-16) var(--space-32); font-size: var(--font-size-xl);">Generate Floor Plan →</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2D Floor Plan Drawing View -->
+    <div id="canvasView" class="view-container hidden">
+        <div class="progress-indicator py-8">
+            <div class="progress-step inactive">1. House Details</div>
+            <div class="progress-step inactive">→</div>
+            <div class="progress-step active">2. 2D Floor Plan</div>
+            <div class="progress-step inactive">→</div>
+            <div class="progress-step inactive">3. 3D Visualization</div>
+        </div>
+        
+        <!-- Full Screen Toggle -->
+        <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+            <button id="fullscreenToggle2D" class="btn btn--outline" onclick="toggleFullscreen('canvasView')" title="Toggle Full Screen">
+                📺 Full Screen
+            </button>
+        </div>
+        
+        <div class="canvas-container">
+            <div class="canvas-sidebar">
+                <h3>Project Details</h3>
+                <div id="projectSummary"></div>
+                
+                <h4 class="mt-8">Room List</h4>
+                <div id="roomList"></div>
+                
+                <h4 class="mt-8">Legend</h4>
+                <div class="legend">
+                    <div><span style="color: #e0f2fe;">■</span> Living Areas</div>
+                    <div><span style="color: #dbeafe;">■</span> Bathrooms</div>
+                    <div><span style="color: #fef3c7;">■</span> Kitchen</div>
+                    <div><span style="color: #d1fae5;">■</span> Bedrooms</div>
+                </div>
+            </div>
+            
+            <div class="canvas-main">
+                <div class="canvas-toolbar">
+                    <div class="tool-button active" data-tool="wall" title="Wall Tool">▬</div>
+                    <div class="tool-button" data-tool="door" title="Door Tool">⌔</div>
+                    <div class="tool-button" data-tool="window" title="Window Tool">▭</div>
+                    <div class="tool-button" data-tool="label" title="Label Tool">T</div>
+                    <div class="tool-button" data-tool="dimension" title="Dimension Tool">↔</div>
+                    <div class="tool-button" data-tool="eraser" title="Eraser Tool">⌫</div>
+                </div>
+                
+                <div class="canvas-area">
+                    <div class="canvas-info" style="position: absolute; top: 10px; left: 10px; background: rgba(255,255,255,0.9); padding: var(--space-8); border-radius: var(--radius-base); font-size: var(--font-size-sm); z-index: 5;">
+                        <div><strong>Grid:</strong> 1 square = 1 foot</div>
+                        <div><strong>Active Tool:</strong> <span id="activeToolDisplay">Wall</span></div>
+                    </div>
+                    <canvas id="floorPlanCanvas"></canvas>
+                </div>
+                
+                <div class="canvas-actions" style="padding: var(--space-20); gap: var(--space-16);">
+                    <div class="flex gap-8">
+                        <button class="btn btn--secondary btn--lg" onclick="showView('formView')">← Back to Edit Details</button>
+                        <button class="btn btn--outline btn--lg" onclick="saveFloorPlan()">💾 Save Floor Plan</button>
+                        <button class="btn btn--outline btn--lg" onclick="exportToPDF()">📄 Export as PDF</button>
+                    </div>
+                    <button class="btn btn--primary" style="padding: var(--space-16) var(--space-32); font-size: var(--font-size-xl);" onclick="showView('view3dView')">View in 3D →</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3D Visualization View -->
+    <div id="view3dView" class="view-container hidden">
+        <div class="progress-indicator py-8">
+            <div class="progress-step inactive">1. House Details</div>
+            <div class="progress-step inactive">→</div>
+            <div class="progress-step inactive">2. 2D Floor Plan</div>
+            <div class="progress-step inactive">→</div>
+            <div class="progress-step active">3. 3D Visualization</div>
+        </div>
+        
+        <!-- Full Screen Toggle -->
+        <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+            <button id="fullscreenToggle3D" class="btn btn--outline" onclick="toggleFullscreen('view3dView')" title="Toggle Full Screen">
+                📺 Full Screen
+            </button>
+        </div>
+        
+        <div class="view-3d-container">
+            <div class="view-3d-main">
+                <div class="view-3d-canvas" id="view3dCanvas">
+                    <div class="house-3d" id="house3d"></div>
+                </div>
+                
+                <div class="view-3d-controls">
+                    <h4>🎮 3D Controls</h4>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4);">
+                        <button class="btn btn--sm" onclick="rotate3DView('left')" title="Rotate view left">↺ Left</button>
+                        <button class="btn btn--sm" onclick="rotate3DView('right')" title="Rotate view right">↻ Right</button>
+                    </div>
+                    <hr style="margin: var(--space-8) 0; border: 1px solid var(--color-border);">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4);">
+                        <button class="btn btn--sm" onclick="rotate3DView('top')" title="Bird's eye view">🦅 Top</button>
+                        <button class="btn btn--sm" onclick="rotate3DView('front')" title="Front elevation">👁️ Front</button>
+                    </div>
+                    <button class="btn btn--sm" onclick="rotate3DView('iso')" title="Isometric perspective">📐 Isometric</button>
+                    <hr style="margin: var(--space-8) 0; border: 1px solid var(--color-border);">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4);">
+                        <button class="btn btn--sm" onclick="zoom3DView('in')" title="Zoom in closer">🔍 In</button>
+                        <button class="btn btn--sm" onclick="zoom3DView('out')" title="Zoom out further">🔍 Out</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="view-3d-sidebar">
+                <h3>Project Summary</h3>
+                <div id="project3DSummary"></div>
+                
+                <h4 class="mt-8">Room Breakdown</h4>
+                <div id="room3DBreakdown"></div>
+                
+                <h4 class="mt-8">Construction Cost</h4>
+                <div id="costEstimate"></div>
+                
+                <div class="flex flex-col gap-8 mt-8">
+                    <button class="btn btn--secondary btn--lg" onclick="showView('canvasView')">← Back to 2D Editor</button>
+                    <button class="btn btn--outline btn--lg" onclick="download3DView()">📥 Download 3D View</button>
+                    <button class="btn btn--outline btn--lg" onclick="shareDesign()">📤 Share Design</button>
+                    <button class="btn btn--secondary btn--lg" onclick="showView('landingView'); resetApp()">🏠 Start New Project</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interior Design View Removed -->
+    <div id="interiorView" class="view-container hidden" style="display: none !important;">
+        <div class="progress-indicator py-8">
+            <div class="progress-step inactive">Step 1: House Details</div>
+            <div class="progress-step inactive">Step 2: 2D Floor Plan</div>
+            <div class="progress-step inactive">Step 3: 3D Visualization</div>
+            <div class="progress-step active">Step 4: Interior Design</div>
+        </div>
+        
+        <div class="interior-header">
+            <h2>Your Dream Home - Complete 3D Interior</h2>
+            <p>Explore your fully furnished house with realistic interiors</p>
+        </div>
+        
+        <div class="interior-container">
+            <!-- Room Selection Panel -->
+            <div class="interior-sidebar-left">
+                <h3>Room Selection</h3>
+                <div id="roomSelectionList" class="room-list"></div>
+                
+                <h4 class="mt-8">Camera Controls</h4>
+                <div class="camera-controls">
+                    <button class="btn btn--sm" onclick="rotateInteriorView('left')">← Rotate Left</button>
+                    <button class="btn btn--sm" onclick="rotateInteriorView('right')">Rotate Right →</button>
+                    <button class="btn btn--sm" onclick="zoomInteriorView('in')">🔍 Zoom In</button>
+                    <button class="btn btn--sm" onclick="zoomInteriorView('out')">🔍 Zoom Out</button>
+                </div>
+                
+                <h4 class="mt-8">View Options</h4>
+                <div class="view-toggles">
+                    <label class="toggle-item"><input type="checkbox" checked onchange="toggleFurniture()"> Show Furniture</label>
+                    <label class="toggle-item"><input type="checkbox" checked onchange="toggleWalls()"> Show Walls</label>
+                    <label class="toggle-item"><input type="checkbox" onchange="toggleCeiling()"> Show Ceiling</label>
+                    <label class="toggle-item"><input type="checkbox" checked onchange="toggleLighting()"> Show Lighting</label>
+                </div>
+            </div>
+            
+            <!-- Main 3D Interior Area -->
+            <div class="interior-main">
+                <div class="interior-canvas" id="interiorCanvas">
+                    <div class="room-interior-3d" id="roomInterior3d"></div>
+                </div>
+            </div>
+            
+            <!-- Furniture Customization Panel -->
+            <div class="interior-sidebar-right">
+                <h3>Furniture Style</h3>
+                <div class="style-selector">
+                    <select id="furnitureStyle" class="form-control" onchange="updateFurnitureStyle()">
+                        <option value="Modern">Modern</option>
+                        <option value="Traditional">Traditional</option>
+                        <option value="Contemporary">Contemporary</option>
+                        <option value="Minimalist">Minimalist</option>
+                        <option value="Rustic">Rustic</option>
+                        <option value="Industrial">Industrial</option>
+                    </select>
+                </div>
+                
+                <h4 class="mt-8">Color Scheme</h4>
+                <div class="color-scheme-selector">
+                    <div class="color-option active" data-scheme="neutral" onclick="selectColorScheme('neutral')">Neutral</div>
+                    <div class="color-option" data-scheme="warm" onclick="selectColorScheme('warm')">Warm</div>
+                    <div class="color-option" data-scheme="cool" onclick="selectColorScheme('cool')">Cool</div>
+                    <div class="color-option" data-scheme="vibrant" onclick="selectColorScheme('vibrant')">Vibrant</div>
+                    <div class="color-option" data-scheme="monochrome" onclick="selectColorScheme('monochrome')">Mono</div>
+                </div>
+                
+                <h4 class="mt-8">Current Room Info</h4>
+                <div id="currentRoomInfo" class="room-info"></div>
+                
+                <h4 class="mt-8">Furniture List</h4>
+                <div id="furnitureList" class="furniture-list"></div>
+                
+                <h4 class="mt-8">Room Summary</h4>
+                <div id="roomSummary" class="room-summary"></div>
+            </div>
+        </div>
+        
+        <!-- Bottom Action Bar -->
+        <div class="interior-actions">
+            <div class="action-left">
+                <button class="btn btn--secondary" onclick="showView('view3dView')">Back to 3D Structure</button>
+                <select id="roomQuickSelect" class="form-control" onchange="selectRoom(this.value)">
+                    <option value="">Quick Room Select</option>
+                </select>
+            </div>
+            <div class="action-right">
+                <button class="btn btn--outline" onclick="downloadInteriorViews()">Download Views</button>
+                <button class="btn btn--outline" onclick="generateReport()">Generate Report</button>
+                <button class="btn btn--outline" onclick="shareInteriorDesign()">Share Design</button>
+                <button class="btn btn--secondary" onclick="showView('landingView'); resetApp()">Start New Project</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Global variables for application state
+        let currentView = 'landingView';
+        let projectData = {};
+        let floorPlanData = {
+            rooms: [],
+            walls: [],
+            doors: [],
+            windows: []
+        };
+        let canvas, ctx;
+        let activeTool = 'wall';
+        let isDrawing = false;
+        let currentRotation = { x: -15, y: 25 };
+        let currentZoom = 1;
+        // Interior variables removed - Interior Design step removed
+        
+        // Interior design data removed - Interior Design step removed
+
+        // Room type configurations
+        const roomTypes = {
+            'Living Room': { color: '#d1fae5', symbol: 'LIVING' },
+            'Kitchen': { color: '#fef3c7', symbol: 'KITCH' },
+            'Bedroom': { color: '#e0f2fe', symbol: 'BED' },
+            'Master Bedroom': { color: '#e0f2fe', symbol: 'MASTER' },
+            'Bathroom': { color: '#dbeafe', symbol: 'BATH' },
+            'Dining Room': { color: '#fce7f3', symbol: 'DINING' },
+            'Office': { color: '#e0e7ff', symbol: 'OFFICE' },
+            'Garage': { color: '#f3f4f6', symbol: 'GAR' }
+        };
+
+        // Sample floor plans based on bedroom count
+        const samplePlans = {
+            1: [
+                { name: 'Living Room', width: 200, height: 150, x: 50, y: 50 },
+                { name: 'Kitchen', width: 120, height: 100, x: 250, y: 50 },
+                { name: 'Bedroom', width: 150, height: 120, x: 50, y: 200 },
+                { name: 'Bathroom', width: 80, height: 80, x: 200, y: 200 }
+            ],
+            2: [
+                { name: 'Living Room', width: 220, height: 180, x: 50, y: 50 },
+                { name: 'Kitchen', width: 140, height: 120, x: 270, y: 50 },
+                { name: 'Bedroom 1', width: 160, height: 140, x: 50, y: 230 },
+                { name: 'Bedroom 2', width: 140, height: 120, x: 210, y: 240 },
+                { name: 'Bathroom', width: 100, height: 90, x: 350, y: 240 }
+            ],
+            3: [
+                { name: 'Living Room', width: 240, height: 200, x: 50, y: 50 },
+                { name: 'Kitchen', width: 160, height: 140, x: 290, y: 50 },
+                { name: 'Dining Room', width: 140, height: 120, x: 290, y: 190 },
+                { name: 'Master Bedroom', width: 180, height: 160, x: 50, y: 250 },
+                { name: 'Bedroom 2', width: 140, height: 120, x: 230, y: 310 },
+                { name: 'Bedroom 3', width: 120, height: 100, x: 370, y: 310 },
+                { name: 'Bathroom 1', width: 90, height: 80, x: 50, y: 410 },
+                { name: 'Bathroom 2', width: 80, height: 70, x: 140, y: 410 }
+            ]
+        };
+
+        // Initialize the application
+        function init() {
+            // Set up event listeners
+            document.getElementById('houseForm').addEventListener('submit', handleFormSubmit);
+            
+            // Initialize canvas when the canvas view is shown
+            initCanvas();
+        }
+
+        // View management functions
+        function showView(viewId) {
+            // Don't allow navigation to removed interior view
+            if (viewId === 'interiorView') {
+                return;
+            }
+            
+            // Hide all views
+            document.querySelectorAll('.view-container').forEach(view => {
+                view.classList.add('hidden');
+            });
+            
+            // Show the selected view
+            document.getElementById(viewId).classList.remove('hidden');
+            currentView = viewId;
+            
+            // Handle view-specific initialization
+            if (viewId === 'canvasView') {
+                setTimeout(() => {
+                    initCanvas();
+                    generateFloorPlan();
+                }, 100);
+            } else if (viewId === 'view3dView') {
+                setTimeout(() => {
+                    generate3DView();
+                }, 100);
+            }
+        }
+        
+        // Full screen functionality
+        function toggleFullscreen(containerId) {
+            const container = document.getElementById(containerId);
+            const isFullscreen = container.querySelector('.canvas-container, .view-3d-container').classList.contains('fullscreen');
+            
+            if (isFullscreen) {
+                exitFullscreen(containerId);
+            } else {
+                enterFullscreen(containerId);
+            }
+        }
+        
+        function enterFullscreen(containerId) {
+            const container = document.getElementById(containerId);
+            const mainContainer = container.querySelector('.canvas-container, .view-3d-container');
+            
+            mainContainer.classList.add('fullscreen');
+            
+            // Add exit button
+            const exitBtn = document.createElement('button');
+            exitBtn.innerHTML = '✕ Exit Full Screen';
+            exitBtn.className = 'btn btn--secondary';
+            exitBtn.style.cssText = 'position: fixed; top: 20px; left: 20px; z-index: 1001;';
+            exitBtn.onclick = () => exitFullscreen(containerId);
+            exitBtn.id = 'exitFullscreenBtn';
+            container.appendChild(exitBtn);
+            
+            // Update toggle button text
+            const toggleBtn = document.getElementById(`fullscreenToggle${containerId.includes('canvas') ? '2D' : '3D'}`);
+            if (toggleBtn) toggleBtn.innerHTML = '⬇️ Exit Full Screen';
+        }
+        
+        function exitFullscreen(containerId) {
+            const container = document.getElementById(containerId);
+            const mainContainer = container.querySelector('.canvas-container, .view-3d-container');
+            
+            mainContainer.classList.remove('fullscreen');
+            
+            // Remove exit button
+            const exitBtn = document.getElementById('exitFullscreenBtn');
+            if (exitBtn) exitBtn.remove();
+            
+            // Update toggle button text
+            const toggleBtn = document.getElementById(`fullscreenToggle${containerId.includes('canvas') ? '2D' : '3D'}`);
+            if (toggleBtn) toggleBtn.innerHTML = '📺 Full Screen';
+        }
+
+        // Form handling
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            
+            // Collect form data
+            projectData = {
+                name: document.getElementById('houseName').value,
+                area: parseInt(document.getElementById('totalArea').value),
+                unit: document.getElementById('areaUnit').value,
+                bedrooms: parseInt(document.getElementById('bedrooms').value),
+                bathrooms: parseInt(document.getElementById('bathrooms').value),
+                floors: parseInt(document.getElementById('floors').value),
+                style: document.getElementById('houseStyle').value,
+                budget: document.getElementById('budget').value,
+                requirements: document.getElementById('requirements').value,
+                features: []
+            };
+            
+            // Collect special features
+            document.querySelectorAll('input[type="checkbox"]:checked').forEach(checkbox => {
+                projectData.features.push(checkbox.value);
+            });
+            
+            // Update project summary in sidebar
+            updateProjectSummary();
+            
+            // Show 2D canvas view
+            showView('canvasView');
+        }
+
+        // Canvas initialization and management
+        function initCanvas() {
+            canvas = document.getElementById('floorPlanCanvas');
+            if (!canvas) return;
+            
+            ctx = canvas.getContext('2d');
+            
+            // Set canvas size
+            const container = canvas.parentElement;
+            canvas.width = container.clientWidth - 40;
+            canvas.height = container.clientHeight - 40;
+            
+            // Set up tool selection with enhanced feedback
+            document.querySelectorAll('.tool-button').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    document.querySelectorAll('.tool-button').forEach(b => b.classList.remove('active'));
+                    e.target.classList.add('active');
+                    activeTool = e.target.getAttribute('data-tool');
+                    
+                    // Update active tool display
+                    const toolNames = {
+                        'wall': 'Wall Drawing',
+                        'door': 'Door Placement',
+                        'window': 'Window Placement',
+                        'label': 'Room Labeling',
+                        'dimension': 'Measurements',
+                        'eraser': 'Eraser'
+                    };
+                    
+                    const display = document.getElementById('activeToolDisplay');
+                    if (display) {
+                        display.textContent = toolNames[activeTool] || activeTool;
+                    }
+                    
+                    // Update canvas cursor
+                    if (canvas) {
+                        const cursors = {
+                            'wall': 'crosshair',
+                            'door': 'copy',
+                            'window': 'copy',
+                            'label': 'text',
+                            'dimension': 'crosshair',
+                            'eraser': 'not-allowed'
+                        };
+                        canvas.style.cursor = cursors[activeTool] || 'default';
+                    }
+                });
+            });
+            
+            // Set up canvas event listeners
+            canvas.addEventListener('mousedown', startDrawing);
+            canvas.addEventListener('mousemove', draw);
+            canvas.addEventListener('mouseup', stopDrawing);
+            canvas.addEventListener('click', handleCanvasClick);
+        }
+
+        function startDrawing(e) {
+            if (activeTool === 'wall') {
+                isDrawing = true;
+            }
+        }
+
+        function draw(e) {
+            if (!isDrawing || activeTool !== 'wall') return;
+            
+            // Drawing logic for walls would go here
+        }
+
+        function stopDrawing() {
+            isDrawing = false;
+        }
+
+        function handleCanvasClick(e) {
+            const rect = canvas.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            if (activeTool === 'door') {
+                addDoor(x, y);
+            } else if (activeTool === 'window') {
+                addWindow(x, y);
+            } else if (activeTool === 'label') {
+                addLabel(x, y);
+            }
+        }
+
+        // Generate floor plan based on project data
+        function generateFloorPlan() {
+            if (!canvas || !ctx) return;
+            
+            // Clear canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Get appropriate floor plan template
+            const bedroomCount = Math.min(projectData.bedrooms || 2, 3);
+            const template = samplePlans[bedroomCount] || samplePlans[2];
+            
+            // Scale template based on total area
+            const scaleFactor = Math.sqrt(projectData.area || 1500) / 50;
+            
+            floorPlanData.rooms = template.map(room => ({
+                ...room,
+                width: room.width * scaleFactor,
+                height: room.height * scaleFactor,
+                x: room.x * scaleFactor,
+                y: room.y * scaleFactor
+            }));
+            
+            // Draw rooms
+            drawRooms();
+            updateRoomList();
+        }
+
+        function drawRooms() {
+            floorPlanData.rooms.forEach(room => {
+                const roomType = roomTypes[room.name] || roomTypes['Living Room'];
+                
+                // Draw room background
+                ctx.fillStyle = roomType.color;
+                ctx.fillRect(room.x, room.y, room.width, room.height);
+                
+                // Draw room border
+                ctx.strokeStyle = '#333';
+                ctx.lineWidth = 2;
+                ctx.strokeRect(room.x, room.y, room.width, room.height);
+                
+                // Draw room label
+                ctx.fillStyle = '#333';
+                ctx.font = '14px Arial';
+                ctx.textAlign = 'center';
+                ctx.fillText(
+                    room.name,
+                    room.x + room.width / 2,
+                    room.y + room.height / 2 - 10
+                );
+                
+                // Draw dimensions
+                ctx.font = '12px Arial';
+                const widthFt = Math.round(room.width / 4);
+                const heightFt = Math.round(room.height / 4);
+                ctx.fillText(
+                    `${widthFt}' × ${heightFt}'`,
+                    room.x + room.width / 2,
+                    room.y + room.height / 2 + 10
+                );
+            });
+        }
+
+        function addDoor(x, y) {
+            // Add door logic
+            floorPlanData.doors.push({ x, y });
+            drawDoor(x, y);
+        }
+
+        function addWindow(x, y) {
+            // Add window logic
+            floorPlanData.windows.push({ x, y });
+            drawWindow(x, y);
+        }
+
+        function addLabel(x, y) {
+            const text = prompt('Enter label text:');
+            if (text) {
+                ctx.fillStyle = '#000';
+                ctx.font = '14px Arial';
+                ctx.fillText(text, x, y);
+            }
+        }
+
+        function drawDoor(x, y) {
+            ctx.strokeStyle = '#8B4513';
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+            ctx.arc(x, y, 20, 0, Math.PI / 2);
+            ctx.stroke();
+        }
+
+        function drawWindow(x, y) {
+            ctx.fillStyle = '#87CEEB';
+            ctx.fillRect(x - 15, y - 5, 30, 10);
+            ctx.strokeStyle = '#333';
+            ctx.lineWidth = 2;
+            ctx.strokeRect(x - 15, y - 5, 30, 10);
+        }
+
+        // 3D Visualization functions
+        function generate3DView() {
+            const house3d = document.getElementById('house3d');
+            house3d.innerHTML = '';
+            
+            floorPlanData.rooms.forEach((room, index) => {
+                create3DRoom(room, house3d);
+            });
+            
+            update3DSummary();
+        }
+
+        function create3DRoom(room, container) {
+            const roomDiv = document.createElement('div');
+            roomDiv.className = 'room-3d';
+            
+            const scale = 0.5; // Scale down for 3D view
+            const height = 100; // Room height in 3D
+            
+            roomDiv.style.width = `${room.width * scale}px`;
+            roomDiv.style.height = `${room.height * scale}px`;
+            roomDiv.style.left = `${room.x * scale}px`;
+            roomDiv.style.top = `${room.y * scale}px`;
+            
+            // Create walls
+            ['front', 'back', 'left', 'right'].forEach(wall => {
+                const wallDiv = document.createElement('div');
+                wallDiv.className = 'room-wall';
+                
+                if (wall === 'front' || wall === 'back') {
+                    wallDiv.style.width = `${room.width * scale}px`;
+                    wallDiv.style.height = `${height}px`;
+                    wallDiv.style.transform = wall === 'front' ? 
+                        `translateZ(${room.height * scale / 2}px)` : 
+                        `translateZ(-${room.height * scale / 2}px) rotateY(180deg)`;
+                } else {
+                    wallDiv.style.width = `${room.height * scale}px`;
+                    wallDiv.style.height = `${height}px`;
+                    wallDiv.style.transform = wall === 'left' ? 
+                        `translateX(-${room.height * scale / 2}px) rotateY(-90deg)` : 
+                        `translateX(${room.width * scale + room.height * scale / 2}px) rotateY(90deg)`;
+                }
+                
+                roomDiv.appendChild(wallDiv);
+            });
+            
+            // Create floor
+            const floorDiv = document.createElement('div');
+            floorDiv.className = 'room-floor';
+            floorDiv.style.width = `${room.width * scale}px`;
+            floorDiv.style.height = `${room.height * scale}px`;
+            floorDiv.style.transform = `translateY(${height}px) rotateX(90deg)`;
+            const roomType = roomTypes[room.name] || roomTypes['Living Room'];
+            floorDiv.style.backgroundColor = roomType.color;
+            roomDiv.appendChild(floorDiv);
+            
+            // Add room label
+            const labelDiv = document.createElement('div');
+            labelDiv.className = 'room-label-3d';
+            labelDiv.textContent = room.name;
+            roomDiv.appendChild(labelDiv);
+            
+            container.appendChild(roomDiv);
+        }
+
+        function rotate3DView(direction) {
+            const house3d = document.getElementById('house3d');
+            
+            switch (direction) {
+                case 'left':
+                    currentRotation.y -= 15;
+                    break;
+                case 'right':
+                    currentRotation.y += 15;
+                    break;
+                case 'top':
+                    currentRotation.x = -90;
+                    currentRotation.y = 0;
+                    break;
+                case 'front':
+                    currentRotation.x = 0;
+                    currentRotation.y = 0;
+                    break;
+                case 'iso':
+                    currentRotation.x = -15;
+                    currentRotation.y = 25;
+                    break;
+            }
+            
+            house3d.style.transform = `rotateX(${currentRotation.x}deg) rotateY(${currentRotation.y}deg) scale(${currentZoom})`;
+        }
+
+        function zoom3DView(direction) {
+            currentZoom += direction === 'in' ? 0.1 : -0.1;
+            currentZoom = Math.max(0.5, Math.min(2.0, currentZoom));
+            
+            const house3d = document.getElementById('house3d');
+            house3d.style.transform = `rotateX(${currentRotation.x}deg) rotateY(${currentRotation.y}deg) scale(${currentZoom})`;
+        }
+
+        // Update functions
+        function updateProjectSummary() {
+            const summary = document.getElementById('projectSummary');
+            if (summary) {
+                summary.innerHTML = `
+                    <div><strong>Name:</strong> ${projectData.name}</div>
+                    <div><strong>Area:</strong> ${projectData.area} ${projectData.unit}</div>
+                    <div><strong>Bedrooms:</strong> ${projectData.bedrooms}</div>
+                    <div><strong>Bathrooms:</strong> ${projectData.bathrooms}</div>
+                    <div><strong>Floors:</strong> ${projectData.floors}</div>
+                    <div><strong>Style:</strong> ${projectData.style}</div>
+                    <div><strong>Features:</strong> ${projectData.features.join(', ') || 'None'}</div>
+                `;
+            }
+        }
+
+        function updateRoomList() {
+            const roomList = document.getElementById('roomList');
+            if (roomList) {
+                roomList.innerHTML = floorPlanData.rooms.map(room => {
+                    const area = Math.round((room.width * room.height) / 16); // Convert to sq ft
+                    return `<div>${room.name}: ${area} sq ft</div>`;
+                }).join('');
+            }
+        }
+
+        function update3DSummary() {
+            const summary = document.getElementById('project3DSummary');
+            const breakdown = document.getElementById('room3DBreakdown');
+            const cost = document.getElementById('costEstimate');
+            
+            if (summary) {
+                summary.innerHTML = `
+                    <div><strong>Project:</strong> ${projectData.name}</div>
+                    <div><strong>Total Area:</strong> ${projectData.area} ${projectData.unit}</div>
+                    <div><strong>Rooms:</strong> ${floorPlanData.rooms.length}</div>
+                    <div><strong>Style:</strong> ${projectData.style}</div>
+                `;
+            }
+            
+            if (breakdown) {
+                const totalArea = floorPlanData.rooms.reduce((sum, room) => {
+                    return sum + Math.round((room.width * room.height) / 16);
+                }, 0);
+                
+                breakdown.innerHTML = floorPlanData.rooms.map(room => {
+                    const area = Math.round((room.width * room.height) / 16);
+                    return `<div>${room.name}: ${area} sq ft</div>`;
+                }).join('') + `<div><strong>Total: ${totalArea} sq ft</strong></div>`;
+            }
+            
+            if (cost) {
+                const estimatedCost = projectData.area * 150; // $150 per sq ft estimate
+                cost.innerHTML = `
+                    <div><strong>Estimated Cost:</strong></div>
+                    <div>$${estimatedCost.toLocaleString()}</div>
+                    <div class="mt-4"><small>*Estimate based on $150/sq ft</small></div>
+                `;
+            }
+        }
+
+        // Export and utility functions
+        function saveFloorPlan() {
+            const dataStr = JSON.stringify({ projectData, floorPlanData }, null, 2);
+            const dataBlob = new Blob([dataStr], { type: 'application/json' });
+            const url = URL.createObjectURL(dataBlob);
+            
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = `${projectData.name || 'floor-plan'}.json`;
+            link.click();
+            
+            URL.revokeObjectURL(url);
+        }
+
+        function exportToPDF() {
+            showNotification('Preparing PDF export... 📄', 'info');
+            
+            setTimeout(() => {
+                const pdfContent = `📋 PDF Export Contents:\n\n📄 Page 1: Project Overview\n• House specifications\n• Room breakdown\n• Cost estimates\n\n📄 Page 2: 2D Floor Plan\n• Scaled architectural drawing\n• Dimensions and measurements\n• Room labels and areas\n\n📄 Page 3: 3D Visualizations\n• Multiple angle renderings\n• Perspective views\n• Technical details\n\nProject: ${projectData.name}\nGenerated: ${new Date().toLocaleDateString()}`;
+                
+                alert(pdfContent);
+                showNotification('PDF ready for download! ✅', 'success');
+            }, 2000);
+        }
+        
+        function saveFloorPlan() {
+            try {
+                const saveData = {
+                    version: '2.0',
+                    projectData,
+                    floorPlanData,
+                    metadata: {
+                        created: new Date().toISOString(),
+                        totalRooms: floorPlanData.rooms.length,
+                        appVersion: 'Enhanced 3-Step Design Tool'
+                    }
+                };
+                
+                const dataStr = JSON.stringify(saveData, null, 2);
+                const dataBlob = new Blob([dataStr], { type: 'application/json' });
+                const url = URL.createObjectURL(dataBlob);
+                
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = `${projectData.name?.replace(/\s+/g, '_') || 'house-design'}_${Date.now()}.json`;
+                link.click();
+                
+                URL.revokeObjectURL(url);
+                showNotification('Floor plan saved successfully! 💾', 'success');
+            } catch (error) {
+                showNotification('Error saving floor plan: ' + error.message, 'error');
+            }
+        }
+
+        function download3DView() {
+            // Capture 3D view as image
+            alert('3D view download functionality would capture the 3D visualization');
+        }
+
+        function shareDesign() {
+            const shareData = {
+                title: `${projectData.name} - House Design`,
+                text: `Check out my house design: ${projectData.bedrooms} bedrooms, ${projectData.bathrooms} bathrooms, ${projectData.area} ${projectData.unit}`,
+                url: window.location.href
+            };
+            
+            if (navigator.share) {
+                navigator.share(shareData);
+            } else {
+                // Fallback - copy to clipboard
+                navigator.clipboard.writeText(`${shareData.title}\n${shareData.text}\n${shareData.url}`);
+                alert('Design details copied to clipboard!');
+            }
+        }
+
+        function resetApp() {
+            projectData = {};
+            floorPlanData = { rooms: [], walls: [], doors: [], windows: [] };
+            currentRotation = { x: -15, y: 25 };
+            currentZoom = 1;
+            
+            // Reset form
+            document.getElementById('houseForm').reset();
+            
+            // Clear canvas if it exists
+            if (canvas && ctx) {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+            }
+            
+            // Exit any fullscreen mode
+            const fullscreenElement = document.querySelector('.fullscreen');
+            if (fullscreenElement) {
+                fullscreenElement.classList.remove('fullscreen');
+                const exitBtn = document.getElementById('exitFullscreenBtn');
+                if (exitBtn) exitBtn.remove();
+            }
+        }
+
+        // Interior Design Functions - REMOVED
+        // Interior design functionality has been removed as per requirements
+        
+        // selectRoom function removed - Interior Design step removed
+        
+        // generateRoomInterior function removed - Interior Design step removed
+        
+        // createFurnitureElement function removed - Interior Design step removed
+        
+        // getSemanticBackground function removed - Interior Design step removed
+        
+        // Interior Design functions removed - Step 4 eliminated
+        
+        // Utility functions for canvas operations
+        function clearCanvas() {
+            if (canvas && ctx) {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                floorPlanData.rooms = [];
+                floorPlanData.walls = [];
+                floorPlanData.doors = [];
+                floorPlanData.windows = [];
+                updateRoomList();
+                
+                // Show confirmation
+                showNotification('Canvas cleared! 🔄', 'info');
+            }
+        }
+        
+        function undoLast() {
+            // Simplified undo - in a real app, you'd maintain a history stack
+            showNotification('Undo functionality would remove the last drawn item', 'info');
+        }
+        
+        function showNotification(message, type = 'success') {
+            const notification = document.createElement('div');
+            const icons = {
+                success: '✅',
+                info: 'ℹ️',
+                warning: '⚠️',
+                error: '❌'
+            };
+            
+            const colors = {
+                success: 'var(--color-success)',
+                info: 'var(--color-info)',
+                warning: 'var(--color-warning)',
+                error: 'var(--color-error)'
+            };
+            
+            notification.innerHTML = `${icons[type]} ${message}`;
+            notification.style.cssText = `
+                position: fixed;
+                top: 80px;
+                right: 20px;
+                background: ${colors[type]};
+                color: white;
+                padding: var(--space-12) var(--space-20);
+                border-radius: var(--radius-lg);
+                font-size: var(--font-size-lg);
+                z-index: 1000;
+                box-shadow: var(--shadow-lg);
+                animation: slideIn 0.3s ease;
+                max-width: 300px;
+            `;
+            document.body.appendChild(notification);
+            setTimeout(() => {
+                notification.remove();
+            }, 4000);
+        }
+        
+        // Enhanced download and sharing functions
+        function download3DView() {
+            const projectSummary = `📊 Project Summary:\n\n🏠 ${projectData.name}\n📐 ${projectData.area} ${projectData.unit}\n🛏️ ${projectData.bedrooms} bedrooms\n🚿 ${projectData.bathrooms} bathrooms\n🏗️ ${projectData.floors} floors\n🎨 ${projectData.style} style\n📦 ${floorPlanData.rooms.length} rooms designed\n\n💡 Features: ${projectData.features.join(', ') || 'Standard layout'}`;
+            
+            showNotification('3D view download prepared! 📥', 'success');
+            
+            // In a real application, you would capture the 3D view as an image
+            setTimeout(() => {
+                alert(projectSummary + '\n\n📁 Files would include:\n• High-resolution 3D renders\n• Interactive model files\n• Technical specification sheets');
+            }, 1000);
+        }
+        
+        function shareDesign() {
+            const totalRooms = floorPlanData.rooms.length;
+            const shareText = `🏠 Check out my house design!\n\n📐 ${projectData.name}\n🛏️ ${projectData.bedrooms} bedrooms, ${projectData.bathrooms} bathrooms\n📏 ${projectData.area} ${projectData.unit} total area\n🏗️ ${totalRooms} rooms designed\n🎨 ${projectData.style} style\n\n✨ Designed with Engineering Your Dream Home`;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: `${projectData.name} - House Design`,
+                    text: shareText,
+                    url: window.location.href
+                });
+            } else {
+                navigator.clipboard.writeText(shareText);
+                
+                // Show a friendly notification
+                const notification = document.createElement('div');
+                notification.innerHTML = '✅ Design details copied to clipboard!';
+                notification.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    background: var(--color-success);
+                    color: white;
+                    padding: var(--space-12) var(--space-20);
+                    border-radius: var(--radius-lg);
+                    font-size: var(--font-size-lg);
+                    z-index: 1000;
+                    box-shadow: var(--shadow-lg);
+                    animation: slideIn 0.3s ease;
+                `;
+                document.body.appendChild(notification);
+                setTimeout(() => {
+                    notification.remove();
+                }, 3000);
+            }
+        }
+        
+        // Enhanced initialization with larger UI support
+        document.addEventListener('DOMContentLoaded', () => {
+            init();
+            
+            // Add keyboard shortcuts for full screen
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'F11') {
+                    e.preventDefault();
+                    if (currentView === 'canvasView') {
+                        toggleFullscreen('canvasView');
+                    } else if (currentView === 'view3dView') {
+                        toggleFullscreen('view3dView');
+                    }
+                }
+                
+                // ESC to exit fullscreen
+                if (e.key === 'Escape') {
+                    if (document.querySelector('.fullscreen')) {
+                        exitFullscreen(currentView);
+                    }
+                }
+            });
+            
+            // Add window resize handler for responsive canvas
+            window.addEventListener('resize', () => {
+                if (currentView === 'canvasView' && canvas) {
+                    const container = canvas.parentElement;
+                    canvas.width = container.clientWidth - 40;
+                    canvas.height = container.clientHeight - 40;
+                    drawRooms(); // Redraw after resize
+                }
+            });
+        });
+    </script>
+</body>
+</html>
